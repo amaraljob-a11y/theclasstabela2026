@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orçamento The Class Professional 2026</title>
+<script id="tema">(function(){try{var t=localStorage.getItem('theclass_tema_v1');if(t!=='dark'&&t!=='light'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F0EB; --surface:#fff; --ink:#2D2B22; --muted:#6E6B5C; --line:#E2DFD3;
+  --olive:#74704C; --olive-t:#74704C; --olive-hover:#4F4C32; --olive-dt:#4F4C32; --olive-soft:#ECE9D6; --khaki:#BCB898; --band:#74704C;
+  --green:#4F6548; --green-soft:#E4EBDD; --amber:#8A5A00; --amber-soft:#FFF3D6; --note-text:#5E3C00; --red:#A32B2B;
+  --seg-bg:#E6E3D6; --seg-text:#524F3E; --ctl:#EFEDE3; --item-on:#FBFAF4; --focus:#9A9660;
+  --font:"Avenir Next","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --serif:"Cormorant Garamond",Cormorant,Garamond,"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#16150F; --surface:#222118; --ink:#EDEBDD; --muted:#A9A590; --line:#3A3828;
+  --olive:#74704C; --olive-t:#C9C48F; --olive-hover:#5F5C3E; --olive-dt:#E3DFB5; --olive-soft:#34321F; --band:#5B5839;
+  --green:#9DBB8F; --green-soft:#2A3626; --amber:#E8B64A; --amber-soft:#3A2E10; --note-text:#F0D9A0;
+  --seg-bg:#2E2C20; --seg-text:#D3CFB8; --ctl:#2E2C20; --item-on:#2A281D; --focus:#C9C48F;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.4;padding-bottom:84px}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.top{background:var(--surface);border-bottom:1px solid var(--line);padding:12px 16px}
+.top-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;justify-content:space-between}
+.wm{display:inline-block;color:var(--olive-t);line-height:1}
+.wm b{display:block;font-family:var(--serif);font-weight:500;font-size:34px;letter-spacing:.015em;text-transform:uppercase}
+.wm span{display:block;margin-top:4px;font-size:10px;text-align:justify;text-align-last:justify;letter-spacing:.2em;text-transform:uppercase}
+.tag{font-size:14px;color:var(--muted)}
+.band{background:var(--band);color:#fff;padding:12px 16px 14px}
+.band-in{max-width:1180px;margin:0 auto}
+.band small{display:block;font-size:13px;opacity:.88}
+.band strong{display:block;font-family:var(--serif);font-size:32px;line-height:1.1;font-weight:600}
+.band em{font-style:normal;font-size:14px;background:rgba(255,255,255,.18);display:inline-block;padding:3px 11px;border-radius:99px;margin-top:7px}
+.controls{max-width:1180px;margin:0 auto;padding:14px 16px 4px;display:flex;flex-wrap:wrap;gap:12px 28px;align-items:flex-end}
+.lbl{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
+.seg{display:inline-flex;background:var(--seg-bg);border-radius:11px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:9px 14px;border-radius:9px;font-weight:600;color:var(--seg-text);min-height:42px}
+.seg button[aria-pressed="true"]{background:var(--olive);color:#fff;box-shadow:0 1px 3px rgba(60,56,30,.3)}
+.seg button:disabled{opacity:.4;cursor:not-allowed}
+.check{display:flex;gap:9px;align-items:flex-start;font-size:15px;max-width:340px;padding-bottom:6px}
+.check input{width:20px;height:20px;margin-top:1px;accent-color:var(--olive);flex:none}
+.rules{max-width:1180px;margin:0 auto;padding:6px 16px 0;font-size:14px;color:var(--muted)}
+.rules summary{cursor:pointer;padding:6px 0}
+.rules label{display:flex;gap:8px;align-items:flex-start;padding:5px 0;color:var(--ink)}
+.rules input{margin-top:3px;accent-color:var(--olive)}
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 0;display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+@media(min-width:980px){.layout{grid-template-columns:minmax(0,1fr) 390px;align-items:start}body{padding-bottom:24px}}
+.search{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 8px}
+.search input{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);font-size:16px}
+.chips{display:flex;gap:7px;overflow-x:auto;padding:2px 0 10px;scrollbar-width:thin}
+.chip{flex:none;border:1.5px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 13px;font-size:14px;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--olive-soft);border-color:var(--olive);color:var(--olive-dt);font-weight:700}
+.sec{font-size:14px;color:var(--olive-t);margin:18px 0 2px;padding-bottom:5px;border-bottom:1px solid var(--line);font-weight:600}
+.grp{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0 8px}
+.grp h3{margin:0;font-family:var(--serif);font-size:23px;font-weight:600;color:var(--olive-dt)}
+.grp .kit{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.btn{border:1.5px solid var(--olive);background:var(--surface);color:var(--olive-dt);border-radius:10px;padding:8px 13px;font-weight:600;min-height:40px}
+.btn:hover{background:var(--olive-soft)}
+.btn.solid{background:var(--olive);color:#fff}
+.btn.solid:hover{background:var(--olive-hover)}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.item{background:var(--surface);border:1.5px solid transparent;border-radius:14px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 14px;box-shadow:0 1px 2px rgba(60,56,30,.07)}
+.item.on{border-color:var(--olive);background:var(--item-on)}
+.item .nm{font-weight:650;line-height:1.3}
+.item .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.item .meta button{border:0;background:none;color:var(--olive-t);padding:0;text-decoration:underline;font-size:13px}
+.price{text-align:right}
+.price b{font-size:20px;font-variant-numeric:tabular-nums}
+.price span{font-size:13px;color:var(--muted)}
+.price small{display:block;font-size:13px;color:var(--green);font-variant-numeric:tabular-nums}
+.price .na{font-size:14px;color:var(--amber);background:var(--amber-soft);padding:3px 8px;border-radius:8px}
+.qrow{grid-column:1/-1;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:11px;overflow:hidden;background:var(--surface)}
+.qty button{border:0;background:var(--ctl);width:44px;height:44px;font-size:22px;line-height:1;color:var(--olive-dt)}
+.qty button:active{background:var(--olive-soft)}
+.qty input{background:transparent;width:56px;text-align:center;border:0;font-size:17px;font-weight:700;height:44px;-moz-appearance:textfield}
+.qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.status{flex:1;min-width:150px;font-size:14px;color:var(--muted)}
+.status b{color:var(--ink);font-size:16px;font-variant-numeric:tabular-nums}
+.status .ok{color:var(--green);font-weight:600}
+.note{background:var(--amber-soft);color:var(--note-text);border-radius:10px;padding:9px 12px;font-size:14px;margin:6px 0 4px}
+.empty{padding:30px 10px;text-align:center;color:var(--muted)}
+.quote{background:var(--surface);border-radius:16px;box-shadow:0 2px 12px rgba(60,56,30,.1);display:flex;flex-direction:column;max-height:calc(100dvh - 24px);position:sticky;top:12px}
+.q-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 8px}
+.q-head h2{margin:0;font-family:var(--serif);font-size:25px;font-weight:600;color:var(--olive-dt)}
+.q-close{display:none;border:0;background:var(--ctl);border-radius:10px;width:42px;height:42px;font-size:20px}
+.q-body{overflow:auto;padding:0 16px;flex:1;min-height:80px}
+.q-body input[type=text],.q-body textarea,.q-body input[type=number]{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--surface)}
+.q-body textarea{resize:vertical;min-height:60px}
+.lines{list-style:none;margin:12px 0;padding:0}
+.lines li{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:2px 10px;padding:10px 0;border-top:1px solid var(--line);align-items:start}
+.lines .ln{font-weight:600;font-size:15px}
+.lines .ld{grid-column:1;font-size:13px;color:var(--muted)}
+.lines .lt{font-weight:700;font-variant-numeric:tabular-nums;grid-row:1;grid-column:2}
+.lines .lx{grid-row:1;grid-column:3;border:0;background:none;color:var(--muted);font-size:20px;width:32px;height:32px;line-height:1}
+.lines .warn{color:var(--amber)}
+.q-empty{color:var(--muted);padding:18px 0;text-align:center}
+.tot{border-top:2px solid var(--ink);padding:10px 16px 4px}
+.tot div{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;padding:2px 0}
+.tot .big{font-size:24px;font-weight:800;padding-top:6px}
+.tot .save{color:var(--green);font-size:14px}
+.disc{display:flex;align-items:center;gap:8px;margin:6px 0 10px}
+.disc input{width:90px!important;text-align:right}
+.q-actions{display:flex;gap:8px;flex-wrap:wrap;padding:10px 16px 16px}
+.q-actions .btn{flex:1;min-width:120px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:20;box-shadow:0 -4px 16px rgba(60,56,30,.1)}
+.bar .t small{display:block;font-size:13px;color:var(--muted)}
+.bar .t strong{font-size:22px;font-variant-numeric:tabular-nums}
+.scrim{display:none}
+@media(max-width:979px){
+  .bar{display:flex}
+  .quote{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:90dvh;border-radius:18px 18px 0 0;transform:translateY(105%);transition:transform .22s ease;z-index:40;box-shadow:0 -8px 30px rgba(30,28,15,.35);padding-bottom:env(safe-area-inset-bottom)}
+  .quote.open{transform:none}
+  .q-close{display:block}
+  .scrim.open{display:block;position:fixed;inset:0;background:rgba(30,28,15,.45);z-index:30}
+}
+@media(min-width:980px){.bar{display:none}}
+@media(prefers-reduced-motion:reduce){.quote{transition:none}}
+dialog{background:var(--surface);color:var(--ink);border:0;border-radius:16px;padding:0;max-width:440px;width:calc(100% - 28px);box-shadow:0 10px 40px rgba(30,28,15,.4)}
+dialog::backdrop{background:rgba(30,28,15,.5)}
+.dlg{padding:16px}
+.dlg h3{margin:0 0 4px;font-family:var(--serif);font-size:22px;color:var(--olive-dt)}
+.dlg p{margin:0 0 10px;color:var(--muted);font-size:14px}
+.dlg table{width:100%;border-collapse:collapse;font-size:15px;font-variant-numeric:tabular-nums}
+.dlg td{padding:7px 0;border-top:1px solid var(--line)}
+.dlg td:last-child{text-align:right;font-weight:700}
+.dlg tr.cur td{background:var(--olive-soft)}
+.dlg .btn{margin-top:12px;width:100%}
+#toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:15px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60;max-width:90%;text-align:center}
+#toast.show{opacity:1}
+.top-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.theme{display:inline-flex;align-items:center;gap:7px;border:1.5px solid var(--line);background:var(--surface);color:var(--olive-dt);border-radius:99px;padding:7px 13px;font-size:14px;font-weight:600;min-height:40px}
+.theme:hover{background:var(--olive-soft)}
+.theme svg{width:18px;height:18px;flex:none}
+.bar-actions{display:flex;gap:8px;align-items:center}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+#toast .tbtn{margin-left:14px;background:none;border:0;color:inherit;font-weight:700;text-decoration:underline;padding:4px}
+#printArea{display:none}
+@media print{
+  body{background:#fff;padding:0}
+  body>*:not(#printArea){display:none!important}
+  #printArea{display:block;color:#000;font-size:12pt}
+  #printArea h1{font-size:20pt;margin:0 0 4px;font-family:Georgia,"Times New Roman",serif;font-weight:500;color:#5A5738}
+  #printArea .pm{color:#444;margin:0 0 12px}
+  #printArea table{width:100%;border-collapse:collapse}
+  #printArea th,#printArea td{border-bottom:1px solid #bbb;padding:6px 4px;text-align:left;vertical-align:top}
+  #printArea th:nth-child(n+2),#printArea td:nth-child(n+2){text-align:right}
+  #printArea .pt{margin-top:12px;text-align:right}
+  #printArea .pt b{font-size:15pt}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="wm" role="img" aria-label="The Class Professional"><b>The Class</b><span>Professional</span></div>
+    <div class="top-r">
+      <span class="tag">Orçamento rápido, tabela 2026</span>
+      <button type="button" class="theme" id="theme" aria-label="Alternar entre modo dia e modo noite"><span id="themeIcon" aria-hidden="true"></span><span id="themeTxt"></span></button>
+    </div>
+  </div>
+</header>
+<div class="band" aria-live="polite">
+  <div class="band-in">
+    <small>Tabela em uso</small>
+    <strong id="tabelaNome"></strong>
+    <em id="tabelaRegra"></em>
+  </div>
+</div>
+
+<section class="controls" aria-label="Perfil do cliente">
+  <div>
+    <span class="lbl" id="lblCli">Tipo de cliente</span>
+    <div class="seg" id="segCli" role="group" aria-labelledby="lblCli"></div>
+  </div>
+  <div id="ctlReg">
+    <span class="lbl" id="lblReg">Região</span>
+    <div class="seg" id="segReg" role="group" aria-labelledby="lblReg"></div>
+  </div>
+  <label class="check" id="specWrap"><input type="checkbox" id="spec"><span>Profissional com desconto exclusivo (20% abaixo da tabela RJ)</span></label>
+</section>
+<details class="rules">
+  <summary>Como o preço de caixa fechada é calculado</summary>
+  <label><input type="radio" name="boxMode" value="full"><span>Só nas caixas completas. Exemplo: 15 unidades de um item com caixa de 12 = 12 no preço de caixa e 3 no preço unitário.</span></label>
+  <label><input type="radio" name="boxMode" value="all"><span>Em todas as unidades, assim que o pedido chegar a 1 caixa. Exemplo: 15 unidades, todas no preço de caixa.</span></label>
+</details>
+
+<main class="layout">
+  <section aria-label="Produtos">
+    <div class="search"><input id="q" type="search" placeholder="Buscar produto ou código" autocomplete="off" aria-label="Buscar produto ou código"></div>
+    <div class="chips" id="chips"></div>
+    <div id="list"></div>
+  </section>
+
+  <aside class="quote" id="quote" aria-label="Orçamento">
+    <div class="q-head"><h2>Orçamento</h2><button class="q-close" id="qClose" aria-label="Fechar orçamento">&times;</button></div>
+    <div class="q-body">
+      <input type="text" id="client" placeholder="Nome do cliente (opcional)" aria-label="Nome do cliente">
+      <ul class="lines" id="lines"></ul>
+      <div class="q-empty" id="qEmpty">Nenhum item ainda. Use os botões + dos produtos para montar o orçamento.</div>
+      <textarea id="notes" placeholder="Observações (opcional)" aria-label="Observações"></textarea>
+      <div class="disc"><label for="disc">Desconto adicional (%)</label><input type="number" id="disc" min="0" max="100" step="0.5" inputmode="decimal"></div>
+    </div>
+    <div class="tot" id="tot"></div>
+    <div class="q-actions">
+      <button class="btn solid" id="bCopy">Copiar texto</button>
+      <button class="btn" id="bPrint">Imprimir ou PDF</button>
+      <button class="btn ghost js-clear" type="button">Limpar orçamento</button>
+    </div>
+  </aside>
+</main>
+
+<div class="bar" id="bar">
+  <div class="t"><small id="barInfo">Orçamento vazio</small><strong id="barTotal">R$ 0,00</strong></div>
+  <div class="bar-actions"><button class="btn ghost js-clear" type="button">Limpar</button><button class="btn solid" id="bOpen">Ver orçamento</button></div>
+</div>
+<div class="scrim" id="scrim"></div>
+<dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="printArea"></div>
+
+<script>
+(function(){
+'use strict';
+var D = {"groups":[{"n":"Tratamento Intenso","s":"Home Care","kit":true},{"n":"Algodão","s":"Home Care","kit":true},{"n":"Óleo de Coco","s":"Home Care","kit":true},{"n":"Restauração Manteiga de Abacate","s":"Home Care","kit":true},{"n":"Reondulação","s":"Home Care","kit":true},{"n":"Manutenção Libéré","s":"Home Care","kit":true},{"n":"Cronograma Capilar Libéré","s":"Home Care","kit":true},{"n":"Finalização Libéré","s":"Home Care","kit":true},{"n":"Crespo Absoluto","s":"Home Care","kit":true},{"n":"Kids Cachinhos","s":"Home Care","kit":true},{"n":"More Love","s":"Home Care","kit":true},{"n":"Óleos, sprays e finalizadores","s":"Home Care","kit":false},{"n":"Sistema Soltura de Cachos","s":"Pro Care exclusivo salão","kit":true},{"n":"Powerful Blend de Proteínas","s":"Pro Care exclusivo salão","kit":true},{"n":"Máscaras 2 kg","s":"Pro Care exclusivo salão","kit":false},{"n":"Lavatório 5 L","s":"Pro Care exclusivo salão","kit":false},{"n":"Coloração e descoloração","s":"Pro Care exclusivo salão","kit":false},{"n":"Sistema Inteligente Libéré","s":"Pro Care exclusivo salão","kit":true},{"n":"Cronograma System Repair Libéré","s":"Pro Care exclusivo salão","kit":true},{"n":"Tratamento Crespo Absoluto","s":"Pro Care exclusivo salão","kit":true},{"n":"SOS Córtex","s":"Pro Care exclusivo salão","kit":false},{"n":"Detox","s":"Pro Care exclusivo salão","kit":true},{"n":"Íons Hair Trat","s":"Pro Care exclusivo salão","kit":true}],"items":[{"id":"r16","code":"PFI100556","n":"Shampoo 500ml - Tratamento Intenso","g":0,"c":500,"b":12,"y":null,"p":{"dist":22.5,"distCx":19.125,"spec":29.92,"rj":37.4,"rjCx":31.79,"r2":38.0,"r2Cx":34.2,"r3":42.0,"r3Cx":35.0,"fin":54.0,"fin3":60.0}},{"id":"r17","code":"PFI400557","n":"Máscara Condicionante 500g - Tratamento Intenso","g":0,"c":500,"b":12,"y":null,"p":{"dist":24.0,"distCx":20.4,"spec":31.68,"rj":39.6,"rjCx":33.66,"r2":40.0,"r2Cx":36.0,"r3":43.0,"r3Cx":36.0,"fin":54.0,"fin3":60.0}},{"id":"r18","code":"PFI300555","n":"Creme de Pentear Tratamento 1000g - Intenso","g":0,"c":1000,"b":12,"y":null,"p":{"dist":30.0,"distCx":25.5,"spec":33.0,"rj":41.25,"rjCx":35.0625,"r2":42.0,"r2Cx":37.8,"r3":52.0,"r3Cx":42.0,"fin":66.0,"fin3":73.0}},{"id":"r21","code":"PFI100006","n":"Shampoo 500ml - Algodão","g":1,"c":500,"b":12,"y":null,"p":{"dist":22.5,"distCx":19.125,"spec":29.92,"rj":37.4,"rjCx":31.79,"r2":38.0,"r2Cx":34.2,"r3":42.0,"r3Cx":35.0,"fin":54.0,"fin3":60.0}},{"id":"r22","code":"PFI400026","n":"Máscara Condicionante 500g - Algodão","g":1,"c":500,"b":12,"y":null,"p":{"dist":24.0,"distCx":20.4,"spec":31.68,"rj":39.6,"rjCx":33.66,"r2":40.0,"r2Cx":36.0,"r3":43.0,"r3Cx":36.0,"fin":54.0,"fin3":60.0}},{"id":"r23","code":"PFI300033","n":"Creme de Pentear 1000g - Algodão","g":1,"c":1000,"b":12,"y":null,"p":{"dist":30.0,"distCx":25.5,"spec":33.0,"rj":41.25,"rjCx":35.0625,"r2":42.0,"r2Cx":37.8,"r3":52.0,"r3Cx":42.0,"fin":66.0,"fin3":73.0}},{"id":"r26","code":"PFI100007","n":"Shampoo 500ml - Óleo de Coco","g":2,"c":500,"b":12,"y":null,"p":{"dist":22.5,"distCx":19.125,"spec":29.92,"rj":37.4,"rjCx":31.79,"r2":38.0,"r2Cx":34.2,"r3":42.0,"r3Cx":35.0,"fin":54.0,"fin3":60.0}},{"id":"r27","code":"PFI400027","n":"Máscara Condicionante 500g - Óleo de Coco","g":2,"c":500,"b":12,"y":null,"p":{"dist":24.0,"distCx":20.4,"spec":31.68,"rj":39.6,"rjCx":33.66,"r2":40.0,"r2Cx":36.0,"r3":43.0,"r3Cx":36.0,"fin":54.0,"fin3":60.0}},{"id":"r28","code":"PFI300034","n":"Creme de Pentear 1000g - Óleo de Coco","g":2,"c":1000,"b":12,"y":null,"p":{"dist":30.0,"distCx":25.5,"spec":33.0,"rj":41.25,"rjCx":35.0625,"r2":42.0,"r2Cx":37.8,"r3":52.0,"r3Cx":42.0,"fin":66.0,"fin3":73.0}},{"id":"r31","code":"PFI100012","n":"Shampoo Restauração Capilar 500ml","g":3,"c":500,"b":12,"y":null,"p":{"dist":22.5,"distCx":19.125,"spec":29.92,"rj":37.4,"rjCx":31.79,"r2":38.0,"r2Cx":34.2,"r3":42.0,"r3Cx":35.0,"fin":54.0,"fin3":60.0}},{"id":"r32","code":"PFI400057","n":"Manteiga de Abacate 500g","g":3,"c":500,"b":12,"y":null,"p":{"dist":24.0,"distCx":20.4,"spec":31.68,"rj":39.6,"rjCx":33.66,"r2":40.0,"r2Cx":36.0,"r3":43.0,"r3Cx":36.0,"fin":54.0,"fin3":60.0}},{"id":"r33","code":"PFI300037","n":"Ativador de Cachos Manteiga de Abacate com Filtro Solar","g":3,"c":1000,"b":12,"y":null,"p":{"dist":30.0,"distCx":25.5,"spec":33.0,"rj":41.25,"rjCx":35.0625,"r2":42.0,"r2Cx":37.8,"r3":52.0,"r3Cx":42.0,"fin":66.0,"fin3":73.0}},{"id":"r36","code":"PFI600041","n":"Gelatina Modeladora D-Pantenol -500ml","g":4,"c":500,"b":12,"y":null,"p":{"dist":20.0,"distCx":17.0,"spec":27.28,"rj":34.1,"rjCx":28.985,"r2":35.0,"r2Cx":31.5,"r3":46.0,"r3Cx":36.0,"fin":54.0,"fin3":65.0}},{"id":"r37","code":"PFI300036","n":"Leave - In Powerful -500ml","g":4,"c":500,"b":12,"y":null,"p":{"dist":22.5,"distCx":19.125,"spec":28.16,"rj":35.2,"rjCx":29.92,"r2":36.0,"r2Cx":32.4,"r3":46.0,"r3Cx":36.0,"fin":54.0,"fin3":65.0}},{"id":"r46","code":"PFI100210","n":"Shampoo Hidro Remineralizante Detangling Libéré 500ml","g":5,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":37.4,"rj":46.75,"rjCx":39.7375,"r2":47.5,"r2Cx":42.75,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r47","code":"PFI200211","n":"Condicionador Acidificante Libéré 500ml","g":5,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":37.4,"rj":46.75,"rjCx":39.7375,"r2":47.5,"r2Cx":42.75,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r50","code":"PFI400218","n":"Máscara Repara e Reconstrói Hair Protein Libéré 500g","g":6,"c":500,"b":12,"y":null,"p":{"dist":35.0,"distCx":29.75,"spec":46.64,"rj":58.3,"rjCx":49.555,"r2":59.0,"r2Cx":53.1,"r3":55.0,"r3Cx":49.5,"fin":76.0,"fin3":75.0}},{"id":"r51","code":"PFI400219","n":"Máscara Nutrição Hair Lipo Libéré 500g","g":6,"c":500,"b":12,"y":null,"p":{"dist":35.0,"distCx":29.75,"spec":46.64,"rj":58.3,"rjCx":49.555,"r2":59.0,"r2Cx":53.1,"r3":55.0,"r3Cx":49.5,"fin":76.0,"fin3":75.0}},{"id":"r52","code":"PFI400220","n":"Máscara Reposição Hídrica Hair Hydra Libéré 500g","g":6,"c":500,"b":12,"y":null,"p":{"dist":35.0,"distCx":29.75,"spec":46.64,"rj":58.3,"rjCx":49.555,"r2":59.0,"r2Cx":53.1,"r3":55.0,"r3Cx":49.5,"fin":76.0,"fin3":75.0}},{"id":"r55","code":"PFI600111","n":"Modelador de Cachos e Crespos Liberé 1000ml","g":7,"c":1000,"b":12,"y":null,"p":{"dist":50.0,"distCx":42.5,"spec":66.88,"rj":83.6,"rjCx":71.06,"r2":84.5,"r2Cx":76.05,"r3":78.0,"r3Cx":70.2,"fin":106.0,"fin3":110.0}},{"id":"r56","code":"PFI100112","n":"Gel Modelador de Cachos e Crespos Liberé 500ml","g":7,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":38.72,"rj":48.4,"rjCx":41.14,"r2":49.0,"r2Cx":44.1,"r3":52.0,"r3Cx":45.0,"fin":64.0,"fin3":73.0}},{"id":"r59","code":"PFI100382","n":"Shampoo Crespo Absoluto com Colágeno 500ml","g":8,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":37.4,"rj":46.75,"rjCx":39.7375,"r2":47.5,"r2Cx":42.75,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r60","code":"PFI400032","n":"Mask Crespo Absoluto Proteínas e Tutano Vegetal 500g","g":8,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":37.4,"rj":46.75,"rjCx":39.7375,"r2":47.5,"r2Cx":42.75,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r61","code":"PFI600030","n":"Finalizador Crespo Absoluto Curl Activator Rícino 1000ml","g":8,"c":1000,"b":12,"y":null,"p":{"dist":37.0,"distCx":31.45,"spec":43.912,"rj":54.89,"rjCx":46.6565,"r2":56.0,"r2Cx":50.4,"r3":57.0,"r3Cx":50.0,"fin":74.0,"fin3":80.0}},{"id":"r81","code":"PFI100176","n":"Shampoo Kids Cachinhos","g":9,"c":500,"b":12,"y":null,"p":{"dist":27.5,"distCx":23.375,"spec":36.96,"rj":46.2,"rjCx":39.27,"r2":47.0,"r2Cx":42.3,"r3":46.0,"r3Cx":40.0,"fin":63.0,"fin3":65.0}},{"id":"r82","code":"PFI100481","n":"Condicionador Kids Cachinhos","g":9,"c":500,"b":12,"y":null,"p":{"dist":27.5,"distCx":23.375,"spec":36.96,"rj":46.2,"rjCx":39.27,"r2":47.0,"r2Cx":42.3,"r3":46.0,"r3Cx":40.0,"fin":63.0,"fin3":65.0}},{"id":"r83","code":"PFI300483","n":"Creme de Pentear Kids Cachinhos","g":9,"c":500,"b":12,"y":null,"p":{"dist":27.5,"distCx":23.375,"spec":36.96,"rj":46.2,"rjCx":39.27,"r2":47.0,"r2Cx":42.3,"r3":46.0,"r3Cx":40.0,"fin":63.0,"fin3":65.0}},{"id":"r86","code":"PFI100484","n":"Shampoo Hidratante More Love","g":10,"c":500,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":37.4,"rj":46.75,"rjCx":39.7375,"r2":47.5,"r2Cx":42.75,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r87","code":"PFI400485","n":"Máscara Tratamento Intenso Hidrolipidica More Love","g":10,"c":250,"b":12,"y":null,"p":{"dist":27.5,"distCx":23.375,"spec":36.96,"rj":46.2,"rjCx":39.27,"r2":47.0,"r2Cx":42.3,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r88","code":"PFI600486","n":"Colágeno Reconstrutor More Love","g":10,"c":1000,"b":12,"y":null,"p":{"dist":50.0,"distCx":42.5,"spec":66.88,"rj":83.6,"rjCx":71.06,"r2":84.5,"r2Cx":76.05,"r3":78.0,"r3Cx":71.0,"fin":106.0,"fin3":110.0}},{"id":"r89","code":"PFI600487","n":"Gel Fresh Gelaty More Love","g":10,"c":250,"b":12,"y":null,"p":{"dist":27.5,"distCx":23.375,"spec":36.96,"rj":46.2,"rjCx":39.27,"r2":47.0,"r2Cx":42.3,"r3":46.0,"r3Cx":41.0,"fin":63.0,"fin3":65.0}},{"id":"r40","code":"PFI600558","n":"Argan Serum Oil","g":11,"c":60,"b":12,"y":null,"p":{"dist":46.0,"distCx":39.1,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.0,"r2Cx":65.7,"r3":67.0,"r3Cx":60.3,"fin":95.0,"fin3":94.0}},{"id":"r42","code":"PFI600384","n":"Spray de Brilho Olixir Oil Shine 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":29.0,"distCx":24.65,"spec":38.72,"rj":48.4,"rjCx":41.14,"r2":49.0,"r2Cx":44.1,"r3":51.0,"r3Cx":46.0,"fin":64.0,"fin3":72.0}},{"id":"r64","code":"PFI100113","n":"Mousse Curl Fix 150ml","g":11,"c":150,"b":12,"y":null,"p":{"dist":28.6,"distCx":24.31,"spec":38.72,"rj":48.4,"rjCx":41.14,"r2":49.0,"r2Cx":44.1,"r3":46.0,"r3Cx":41.0,"fin":62.0,"fin3":65.0}},{"id":"r66","code":"PFI600040","n":"Óleo de Coco 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":19.5,"distCx":16.575,"spec":24.64,"rj":30.8,"rjCx":26.18,"r2":32.0,"r2Cx":28.8,"r3":31.0,"r3Cx":26.0,"fin":47.0,"fin3":46.0}},{"id":"r68","code":"PFI600026","n":"Vegan Oils Antioxidante Oliva 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":21.0,"distCx":17.85,"spec":27.28,"rj":34.1,"rjCx":28.985,"r2":35.0,"r2Cx":31.5,"r3":46.0,"r3Cx":32.0,"fin":47.0,"fin3":60.0}},{"id":"r69","code":"PFI600025","n":"Vegan Oils Vitaminas e Proteinas Abacate 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":21.0,"distCx":17.85,"spec":27.28,"rj":34.1,"rjCx":28.985,"r2":35.0,"r2Cx":31.5,"r3":46.0,"r3Cx":32.0,"fin":47.0,"fin3":60.0}},{"id":"r70","code":"PFI600029","n":"Vegan Oils Resistencia e Prot UV Café Verde 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":21.0,"distCx":17.85,"spec":27.28,"rj":34.1,"rjCx":28.985,"r2":35.0,"r2Cx":31.5,"r3":46.0,"r3Cx":32.0,"fin":47.0,"fin3":60.0}},{"id":"r71","code":"PFI600028","n":"Vegan Oils Crescimento Rícino 60ml","g":11,"c":60,"b":12,"y":null,"p":{"dist":21.0,"distCx":17.85,"spec":27.28,"rj":34.1,"rjCx":28.985,"r2":35.0,"r2Cx":31.5,"r3":46.0,"r3Cx":32.0,"fin":47.0,"fin3":60.0}},{"id":"r73","code":"PFI600024","n":"Spray Multibeneficios 250ml Vinagre Balsamico","g":11,"c":250,"b":12,"y":null,"p":{"dist":32.0,"distCx":27.2,"spec":42.24,"rj":52.8,"rjCx":44.88,"r2":54.0,"r2Cx":48.6,"r3":62.0,"r3Cx":50.0,"fin":72.0,"fin3":87.0}},{"id":"r75","code":"PFI400209","n":"Restructure System - Tecnologia Plex 150ml","g":11,"c":150,"b":12,"y":null,"p":{"dist":32.0,"distCx":27.2,"spec":42.24,"rj":52.8,"rjCx":44.88,"r2":54.0,"r2Cx":48.6,"r3":62.0,"r3Cx":50.0,"fin":72.0,"fin3":87.0}},{"id":"r77","code":"PFI400207","n":"Fun Magic Colors Pink 75ml rende 150ml","g":11,"c":150,"b":6,"y":null,"p":{"dist":41.0,"distCx":34.85,"spec":48.4,"rj":60.5,"rjCx":51.425,"r2":61.0,"r2Cx":54.9,"r3":61.0,"r3Cx":50.4,"fin":77.0,"fin3":86.0}},{"id":"r78","code":"PFI400206","n":"Fun Magic Colors Green 75ml rende 150ml","g":11,"c":150,"b":6,"y":null,"p":{"dist":41.0,"distCx":34.85,"spec":48.4,"rj":60.5,"rjCx":51.425,"r2":61.0,"r2Cx":54.9,"r3":61.0,"r3Cx":50.4,"fin":77.0,"fin3":86.0}},{"id":"r79","code":"PFI400208","n":"Fun Magic Colors Blue 75 Ml rende 150ml","g":11,"c":150,"b":6,"y":null,"p":{"dist":41.0,"distCx":34.85,"spec":48.4,"rj":60.5,"rjCx":51.425,"r2":61.0,"r2Cx":54.9,"r3":61.0,"r3Cx":50.4,"fin":77.0,"fin3":86.0}},{"id":"r94","code":"PFI500058","n":"Líquido Ativador 1000ml","g":12,"c":1000,"b":12,"y":"20 Aplicações","p":{"dist":72.0,"distCx":61.2,"spec":102.96,"rj":128.7,"rjCx":109.395,"r2":145.0,"r2Cx":130.5,"r3":153.0,"r3Cx":141.0,"fin":null,"fin3":null}},{"id":"r95","code":"PFI500059","n":"Massa Relaxante 2000g","g":12,"c":2000,"b":12,"y":"20 Aplicações","p":{"dist":72.0,"distCx":61.2,"spec":102.96,"rj":128.7,"rjCx":109.395,"r2":145.0,"r2Cx":130.5,"r3":153.0,"r3Cx":141.0,"fin":null,"fin3":null}},{"id":"r96","code":"PFI100011","n":"Shampoo Pós Química 1000ml","g":12,"c":1000,"b":12,"y":"33 Aplicações","p":{"dist":35.0,"distCx":29.75,"spec":44.0,"rj":55.0,"rjCx":46.75,"r2":56.0,"r2Cx":50.4,"r3":52.0,"r3Cx":46.0,"fin":null,"fin3":null}},{"id":"r97","code":"PFI400056","n":"Manteiga de Abacate Pós Química 1000g","g":12,"c":1000,"b":12,"y":"33 Aplicações","p":{"dist":38.0,"distCx":32.3,"spec":48.4,"rj":60.5,"rjCx":51.425,"r2":61.0,"r2Cx":54.9,"r3":67.0,"r3Cx":55.0,"fin":null,"fin3":null}},{"id":"r100","code":"PFI100014","n":"Shampoo Blend de Proteínas Powerful - 1000ml","g":13,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":45.0,"distCx":38.25,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.5,"r2Cx":66.15,"r3":74.0,"r3Cx":60.3,"fin":null,"fin3":null}},{"id":"r101","code":"PFI200023","n":"Condicionador Blend de Proteínas Powerful -1000ml","g":13,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":45.0,"distCx":38.25,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.5,"r2Cx":66.15,"r3":74.0,"r3Cx":60.3,"fin":null,"fin3":null}},{"id":"r102","code":"PFI400031","n":"Máscara Blend de Proteínas Powerful -1000ml","g":13,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":45.0,"distCx":38.25,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.5,"r2Cx":66.15,"r3":74.0,"r3Cx":60.3,"fin":null,"fin3":null}},{"id":"r103","code":"PFI300035","n":"Leave In Blend de Proteínas Powerful -1000ml","g":13,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":45.0,"distCx":38.25,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.5,"r2Cx":66.15,"r3":74.0,"r3Cx":60.3,"fin":null,"fin3":null}},{"id":"r106","code":"PFI400028","n":"Máscara - Banho de Verniz - 2000g","g":14,"c":2000,"b":8,"y":"66 Aplicações","p":{"dist":74.0,"distCx":62.9,"spec":96.8,"rj":121.0,"rjCx":102.85,"r2":122.0,"r2Cx":109.8,"r3":128.0,"r3Cx":100.8,"fin":null,"fin3":null}},{"id":"r107","code":"PFI400029","n":"Reconstrução Queratina - 2000g","g":14,"c":2000,"b":8,"y":"66 Aplicações","p":{"dist":74.0,"distCx":62.9,"spec":96.8,"rj":121.0,"rjCx":102.85,"r2":122.0,"r2Cx":109.8,"r3":128.0,"r3Cx":100.8,"fin":null,"fin3":null}},{"id":"r108","code":"PFI400030","n":"Restauração Óleo de Ojon - 2000g","g":14,"c":2000,"b":8,"y":"66 Aplicações","p":{"dist":74.0,"distCx":62.9,"spec":96.8,"rj":121.0,"rjCx":102.85,"r2":122.0,"r2Cx":109.8,"r3":128.0,"r3Cx":100.8,"fin":null,"fin3":null}},{"id":"r110","code":"PFI100013","n":"Shampoo Lavatório 5000ml - (galão)","g":15,"c":5000,"b":4,"y":"166 Aplicações","p":{"dist":76.0,"distCx":64.6,"spec":81.84,"rj":102.3,"rjCx":86.955,"r2":103.0,"r2Cx":92.7,"r3":112.0,"r3Cx":90.0,"fin":null,"fin3":null}},{"id":"r111","code":"PFI200018","n":"Condicionador Lavatório 5000ml - (galão)","g":15,"c":5000,"b":4,"y":"166 Aplicações","p":{"dist":76.0,"distCx":64.6,"spec":81.84,"rj":102.3,"rjCx":86.955,"r2":103.0,"r2Cx":92.7,"r3":112.0,"r3Cx":90.0,"fin":null,"fin3":null}},{"id":"r113","code":"PFI500010","n":"Pó Descolorante Flash Blond 500g","g":16,"c":500,"b":6,"y":"14 Aplicações","p":{"dist":82.0,"distCx":69.7,"spec":101.2,"rj":126.5,"rjCx":107.525,"r2":127.0,"r2Cx":114.3,"r3":124.0,"r3Cx":111.0,"fin":null,"fin3":null}},{"id":"r114","code":"PFI500011","n":"Emulsão Oxidante 20V 900ml","g":16,"c":900,"b":6,"y":"9 Aplicações","p":{"dist":28.0,"distCx":23.8,"spec":35.2,"rj":44.0,"rjCx":37.4,"r2":45.0,"r2Cx":40.5,"r3":47.0,"r3Cx":42.0,"fin":null,"fin3":null}},{"id":"r116","code":"PFI400003","n":"Máscara de Tratamento Red Color Karité 1kg","g":16,"c":1000,"b":6,"y":"25 Aplicações","p":{"dist":82.0,"distCx":69.7,"spec":101.2,"rj":126.5,"rjCx":107.525,"r2":127.0,"r2Cx":114.3,"r3":117.0,"r3Cx":105.0,"fin":null,"fin3":null}},{"id":"r117","code":"PFI400004","n":"Máscara de Tratamento Brown Color Karité 1kg","g":16,"c":1000,"b":6,"y":"25 Aplicações","p":{"dist":82.0,"distCx":69.7,"spec":101.2,"rj":126.5,"rjCx":107.525,"r2":127.0,"r2Cx":114.3,"r3":117.0,"r3Cx":105.0,"fin":null,"fin3":null}},{"id":"r118","code":"PFI400005","n":"Máscara de Tratamento Marsala Color Karité 1kg","g":16,"c":1000,"b":6,"y":"25 Aplicações","p":{"dist":82.0,"distCx":69.7,"spec":101.2,"rj":126.5,"rjCx":107.525,"r2":127.0,"r2Cx":114.3,"r3":117.0,"r3Cx":105.0,"fin":null,"fin3":null}},{"id":"r119","code":"PFI400007","n":"Máscara de Tratamento Black Color Karité 1kg","g":16,"c":1000,"b":6,"y":"25 Aplicações","p":{"dist":82.0,"distCx":69.7,"spec":101.2,"rj":126.5,"rjCx":107.525,"r2":127.0,"r2Cx":114.3,"r3":117.0,"r3Cx":105.0,"fin":null,"fin3":null}},{"id":"r123","code":"PFI100212","n":"Shampoo Hidro Remineralizante Detangling Libéré 1000ml","g":17,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":53.0,"distCx":45.05,"spec":70.4,"rj":88.0,"rjCx":74.8,"r2":89.0,"r2Cx":80.1,"r3":84.0,"r3Cx":75.0,"fin":null,"fin3":null}},{"id":"r124","code":"PFI200213","n":"Condicionador Acidificante Libéré 1000ml","g":17,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":53.0,"distCx":45.05,"spec":70.4,"rj":88.0,"rjCx":74.8,"r2":89.0,"r2Cx":80.1,"r3":84.0,"r3Cx":75.0,"fin":null,"fin3":null}},{"id":"r127","code":"PFI400214","n":"Máscara Tratamento Nutri-Reconstrutor System Repair Libéré 1kg","g":18,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":65.0,"distCx":55.25,"spec":86.24,"rj":107.8,"rjCx":91.63,"r2":109.0,"r2Cx":98.1,"r3":102.0,"r3Cx":90.0,"fin":null,"fin3":null}},{"id":"r128","code":"PFI400215","n":"Máscara Reposição Hidrolipídica System Repair Libéré 1kg","g":18,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":65.0,"distCx":55.25,"spec":86.24,"rj":107.8,"rjCx":91.63,"r2":109.0,"r2Cx":98.1,"r3":102.0,"r3Cx":90.0,"fin":null,"fin3":null}},{"id":"r131","code":"PFI100383","n":"Shampoo Crespo Absoluto com Colágeno 1000ml","g":19,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":53.0,"distCx":45.05,"spec":70.4,"rj":88.0,"rjCx":74.8,"r2":89.0,"r2Cx":80.1,"r3":84.0,"r3Cx":75.0,"fin":null,"fin3":null}},{"id":"r132","code":"PFI400033","n":"Mask Crespo Absoluto Proteínas e Tutano Vegetal 1kg","g":19,"c":1000,"b":6,"y":"33 Aplicações","p":{"dist":48.0,"distCx":40.8,"spec":61.6,"rj":77.0,"rjCx":65.45,"r2":78.0,"r2Cx":70.2,"r3":75.0,"r3Cx":67.0,"fin":null,"fin3":null}},{"id":"r135","code":"PFI400216","n":"SOS Córtex Solution Antiemborrachamento 250ml rende 500ml","g":20,"c":500,"b":6,"y":"16 Aplicações","p":{"dist":72.0,"distCx":61.2,"spec":79.2,"rj":99.0,"rjCx":84.15,"r2":100.0,"r2Cx":90.0,"r3":94.0,"r3Cx":84.0,"fin":null,"fin3":null}},{"id":"r137","code":"PFI100469","n":"Shampoo Mentolado Detox","g":21,"c":300,"b":6,"y":null,"p":{"dist":43.0,"distCx":36.55,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.0,"r2Cx":65.7,"r3":71.0,"r3Cx":62.0,"fin":97.0,"fin3":99.0}},{"id":"r138","code":"PFI400470","n":"Máscara de Argila Verde Detox","g":21,"c":250,"b":6,"y":null,"p":{"dist":43.0,"distCx":36.55,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.0,"r2Cx":65.7,"r3":71.0,"r3Cx":62.0,"fin":null,"fin3":null}},{"id":"r139","code":"PFI400471","n":"Máscara para Haste Capilar Detox","g":21,"c":250,"b":6,"y":null,"p":{"dist":43.0,"distCx":36.55,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.0,"r2Cx":65.7,"r3":71.0,"r3Cx":62.0,"fin":97.0,"fin3":99.0}},{"id":"r140","code":"PFI600473","n":"Essencial Blend Magnific Oil Detox","g":21,"c":30,"b":6,"y":null,"p":{"dist":33.0,"distCx":28.05,"spec":45.76,"rj":57.2,"rjCx":48.62,"r2":58.0,"r2Cx":52.2,"r3":56.0,"r3Cx":50.0,"fin":null,"fin3":null}},{"id":"r141","code":"PFI600474","n":"Essencial Blends Majestic Oil Detox","g":21,"c":30,"b":6,"y":null,"p":{"dist":33.0,"distCx":28.05,"spec":45.76,"rj":57.2,"rjCx":48.62,"r2":58.0,"r2Cx":52.2,"r3":56.0,"r3Cx":50.0,"fin":null,"fin3":null}},{"id":"r142","code":"PFI600474","n":"Essencial Blends Splendid Oil Detox","g":21,"c":30,"b":6,"y":null,"p":{"dist":33.0,"distCx":28.05,"spec":45.76,"rj":57.2,"rjCx":48.62,"r2":58.0,"r2Cx":52.2,"r3":56.0,"r3Cx":50.0,"fin":null,"fin3":null}},{"id":"r143","code":"PFI600475","n":"Tônico Fortalecedor Detox","g":21,"c":120,"b":6,"y":null,"p":{"dist":35.0,"distCx":29.75,"spec":47.52,"rj":59.4,"rjCx":50.49,"r2":60.0,"r2Cx":54.0,"r3":56.0,"r3Cx":50.0,"fin":77.0,"fin3":79.0}},{"id":"r146","code":"PFI100385","n":"Shampoo Líquido Íons Hair Trat","g":22,"c":120,"b":6,"y":null,"p":{"dist":30.0,"distCx":25.5,"spec":40.48,"rj":50.6,"rjCx":43.01,"r2":51.0,"r2Cx":45.9,"r3":51.0,"r3Cx":44.0,"fin":67.0,"fin3":71.0}},{"id":"r147","code":"PFI100477","n":"Shower Gel Capilar Íons Hair Trat","g":22,"c":250,"b":6,"y":null,"p":{"dist":43.0,"distCx":36.55,"spec":58.08,"rj":72.6,"rjCx":61.71,"r2":73.0,"r2Cx":65.7,"r3":71.0,"r3Cx":62.0,"fin":97.0,"fin3":99.0}},{"id":"r148","code":"PFI600478","n":"Óleo de Ozonio Íons Hair Trat","g":22,"c":30,"b":6,"y":null,"p":{"dist":33.0,"distCx":28.05,"spec":45.76,"rj":57.2,"rjCx":48.62,"r2":58.0,"r2Cx":52.2,"r3":56.0,"r3Cx":50.0,"fin":null,"fin3":null}},{"id":"r149","code":"PFI600479","n":"Tônico Capilar Íons Hair Trat","g":22,"c":120,"b":6,"y":null,"p":{"dist":35.0,"distCx":29.75,"spec":47.52,"rj":59.4,"rjCx":50.49,"r2":60.0,"r2Cx":54.0,"r3":56.0,"r3Cx":50.0,"fin":77.0,"fin3":79.0}}]};
+
+var CLI = {dist:'Distribuidor', pro:'Profissional (salão)', final:'Cliente final'};
+var REG = {rj:'RJ Baixada/Centro', r2:'Região II', r3:'Região III'};
+var KEY = 'theclass_orcamento_2026_v1';
+
+function $(s){return document.querySelector(s);}
+function brl(n){return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+function norm(s){return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+var S = {cli:'pro', reg:'rj', spec:false, boxMode:'full', cart:{}, disc:0, client:'', notes:''};
+try{
+  var saved = JSON.parse(localStorage.getItem(KEY)||'null');
+  if(saved && typeof saved==='object'){
+    if(CLI[saved.cli]) S.cli=saved.cli;
+    if(REG[saved.reg]) S.reg=saved.reg;
+    S.spec=!!saved.spec;
+    if(saved.boxMode==='all') S.boxMode='all';
+    if(saved.cart && typeof saved.cart==='object') S.cart=saved.cart;
+    S.disc=Math.min(100,Math.max(0,Number(saved.disc)||0));
+    S.client=String(saved.client||''); S.notes=String(saved.notes||'');
+  }
+}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+
+var F = {q:'', g:'all'};
+var BYID = {}; D.items.forEach(function(p){BYID[p.id]=p;});
+// limpa itens guardados que não existem mais
+Object.keys(S.cart).forEach(function(id){ if(!BYID[id] || !(S.cart[id]>0)) delete S.cart[id]; });
+
+/* ---------- regras de preço ---------- */
+function specOn(){return S.spec && S.cli==='pro' && S.reg==='rj';}
+function tier(p){
+  var x=p.p;
+  if(S.cli==='dist') return {unit:x.dist, box:x.distCx};
+  if(S.cli==='pro'){
+    if(S.reg==='rj') return specOn()? {unit:x.spec, box:null} : {unit:x.rj, box:x.rjCx};
+    if(S.reg==='r2') return {unit:x.r2, box:x.r2Cx};
+    return {unit:x.r3, box:x.r3Cx};
+  }
+  return {unit:(S.reg==='r3'? x.fin3 : x.fin), box:null};
+}
+function calc(p,q){
+  var t=tier(p);
+  if(t.unit==null) return null;
+  var boxes=0, loose=q, total, applied=false;
+  if(t.box!=null && p.b>0 && q>=p.b){
+    applied=true;
+    if(S.boxMode==='full'){ boxes=Math.floor(q/p.b); loose=q-boxes*p.b; total=boxes*p.b*t.box+loose*t.unit; }
+    else { boxes=q/p.b; loose=0; total=q*t.box; }
+  } else { total=q*t.unit; }
+  return {t:t,total:total,boxes:boxes,loose:loose,atUnit:q*t.unit,applied:applied};
+}
+function ruleText(){
+  if(S.cli==='dist') return 'Caixa fechada: 15% de desconto';
+  if(S.cli==='pro'){
+    if(S.reg==='rj') return specOn()? 'Até 20% de desconto, sem preço de caixa' : 'Caixa fechada: 15% de desconto';
+    if(S.reg==='r2') return 'Caixa fechada: 10% de desconto';
+    return 'Caixa fechada: tabela própria da Região III';
+  }
+  return S.reg==='r3' ? 'Preço sugerido da Região III' : 'Preço sugerido ao consumidor';
+}
+function tabelaNome(){
+  if(S.cli==='dist') return 'Distribuidor';
+  if(S.cli==='pro') return 'Profissional, '+REG[S.reg]+(specOn()?' (desconto exclusivo)':'');
+  return 'Cliente final'+(S.reg==='r3'?', Região III':'');
+}
+function detail(p,q,c){
+  if(!c) return S.cli==='final' ? 'Não pode ser vendido para cliente final' : 'Sem preço nesta tabela';
+  if(c.applied){
+    if(S.boxMode==='full'){
+      var s=c.boxes+' cx de '+p.b+' a '+brl(c.t.box);
+      if(c.loose>0) s+=' + '+c.loose+' a '+brl(c.t.unit);
+      return s;
+    }
+    return q+' un a '+brl(c.t.box)+' (preço de caixa)';
+  }
+  return q+' un a '+brl(c.t.unit);
+}
+
+/* ---------- controles do topo ---------- */
+function renderControls(){
+  var h='';
+  Object.keys(CLI).forEach(function(k){h+='<button type="button" data-cli="'+k+'" aria-pressed="'+(S.cli===k)+'">'+CLI[k]+'</button>';});
+  $('#segCli').innerHTML=h;
+  h='';
+  if(S.cli==='final'){
+    var r3=(S.reg==='r3');
+    h+='<button type="button" data-reg="rj" aria-pressed="'+(!r3)+'">Cliente final</button>';
+    h+='<button type="button" data-reg="r3" aria-pressed="'+r3+'">Cliente final Região III</button>';
+    $('#lblReg').textContent='Tabela de preço sugerido';
+  } else {
+    Object.keys(REG).forEach(function(k){h+='<button type="button" data-reg="'+k+'" aria-pressed="'+(S.reg===k && S.cli!=='dist')+'"'+(S.cli==='dist'?' disabled':'')+'>'+REG[k]+'</button>';});
+    $('#lblReg').textContent = S.cli==='dist' ? 'Região (distribuidor tem tabela única)' : 'Região';
+  }
+  $('#segReg').innerHTML=h;
+  $('#specWrap').style.display = (S.cli==='pro' && S.reg==='rj') ? 'flex' : 'none';
+  $('#spec').checked = S.spec;
+  $('#tabelaNome').textContent = tabelaNome();
+  $('#tabelaRegra').textContent = ruleText();
+  document.querySelectorAll('input[name=boxMode]').forEach(function(r){r.checked = (r.value===S.boxMode);});
+}
+
+/* ---------- lista de produtos ---------- */
+function renderChips(){
+  var h='<button type="button" class="chip" data-g="all" aria-pressed="'+(F.g==='all')+'">Todos</button>';
+  D.groups.forEach(function(g,i){h+='<button type="button" class="chip" data-g="'+i+'" aria-pressed="'+(F.g===String(i))+'">'+esc(g.n)+'</button>';});
+  $('#chips').innerHTML=h;
+}
+function itemHTML(p){
+  var t=tier(p), q=S.cart[p.id]||0, na=(t.unit==null);
+  var h='<article class="item'+(q>0?' on':'')+'" data-id="'+p.id+'">';
+  h+='<div><div class="nm">'+esc(p.n)+'</div><div class="meta">'+esc(p.code)+(p.c?', '+p.c+' g':'')+(p.b?', caixa com '+p.b:'')+(p.y?', rende '+esc(p.y):'')+' <button type="button" data-act="tabs">ver todas as tabelas</button></div></div>';
+  h+='<div class="price">';
+  if(na){ h+='<span class="na">Sem preço nesta tabela</span>'; }
+  else{
+    h+='<b>'+brl(t.unit)+'</b> <span>un</span>';
+    if(t.box!=null) h+='<small>Caixa fechada: '+brl(t.box)+' un</small>';
+  }
+  h+='</div>';
+  h+='<div class="qrow"><div class="qty"><button type="button" data-act="minus" aria-label="Diminuir quantidade"'+(na?' disabled':'')+'>&minus;</button>'+
+     '<input type="number" inputmode="numeric" min="0" max="9999" value="'+q+'" aria-label="Quantidade"'+(na?' disabled':'')+'>'+
+     '<button type="button" data-act="plus" aria-label="Aumentar quantidade"'+(na?' disabled':'')+'>+</button></div>';
+  if(!na && t.box!=null && p.b) h+='<button type="button" class="btn" data-act="box">+ caixa ('+p.b+')</button>';
+  h+='<div class="status"></div></div></article>';
+  return h;
+}
+function renderList(){
+  var q=norm(F.q.trim()), h='', lastSec='', any=false;
+  D.groups.forEach(function(g,gi){
+    if(F.g!=='all' && F.g!==String(gi)) return;
+    var items=D.items.filter(function(p){
+      if(p.g!==gi) return false;
+      if(S.cli==='final' && tier(p).unit==null) return false;
+      return !q || norm(p.n+' '+p.code+' '+g.n).indexOf(q)>-1;
+    });
+    if(!items.length) return;
+    any=true;
+    if(g.s!==lastSec){h+='<div class="sec">'+esc(g.s)+'</div>'; lastSec=g.s;}
+    h+='<div class="grp"><h3>'+esc(g.n)+'</h3>';
+    if(g.kit){
+      var all=D.items.filter(function(p){return p.g===gi;}), sum=0, ok=true;
+      all.forEach(function(p){var t=tier(p); if(t.unit==null) ok=false; else sum+=t.unit;});
+      h+='<div class="kit">'+(ok?'<span>Kit completo: '+brl(sum)+'</span>':'')+'<button type="button" class="btn" data-act="kit" data-g="'+gi+'">+ 1 kit</button></div>';
+    }
+    h+='</div>';
+    items.forEach(function(p){h+=itemHTML(p);});
+  });
+  if(S.cli==='final'){
+    var hid=D.items.filter(function(p){return tier(p).unit==null;}).length;
+    if(hid) h='<div class="note">'+hid+' produtos são vendidos só para distribuidor e profissional, por isso não aparecem para cliente final.</div>'+h;
+  }
+  if(!any) h='<div class="empty">Nenhum produto encontrado. Tente outra palavra ou escolha &quot;Todos&quot;.</div>';
+  $('#list').innerHTML=h;
+  document.querySelectorAll('#list .item').forEach(function(el){updateRow(el.getAttribute('data-id'));});
+}
+function updateRow(id){
+  var el=document.querySelector('#list .item[data-id="'+id+'"]'); if(!el) return;
+  var p=BYID[id], q=S.cart[id]||0, t=tier(p), c=(q>0)?calc(p,q):null;
+  el.classList.toggle('on',q>0);
+  var inp=el.querySelector('input'); if(inp && document.activeElement!==inp) inp.value=q;
+  var st=el.querySelector('.status'), h='';
+  if(q>0 && c){
+    h='<b>'+brl(c.total)+'</b> ';
+    if(c.applied) h+='<span class="ok">preço de caixa aplicado</span>';
+    else if(t.box!=null && p.b) h+='faltam '+(p.b-q)+' p/ caixa fechada';
+  }
+  st.innerHTML=h;
+}
+
+/* ---------- orçamento ---------- */
+function cartLines(){
+  var out=[];
+  D.items.forEach(function(p){var q=S.cart[p.id]; if(q>0) out.push({p:p,q:q,c:calc(p,q)});});
+  return out;
+}
+function totals(){
+  var L=cartLines(), sub=0, atUnit=0, units=0, miss=0;
+  L.forEach(function(l){ if(l.c){sub+=l.c.total; atUnit+=l.c.atUnit; units+=l.q;} else miss++; });
+  var d=sub*(S.disc/100);
+  return {lines:L, sub:sub, disc:d, total:sub-d, saved:atUnit-sub, units:units, miss:miss, n:L.length};
+}
+function renderCart(){
+  var T=totals(), h='';
+  T.lines.forEach(function(l){
+    h+='<li data-id="'+l.p.id+'"><div class="ln">'+l.q+'x '+esc(l.p.n)+'</div>'+
+       '<div class="lt">'+(l.c?brl(l.c.total):'-')+'</div><button type="button" class="lx" data-act="rm" aria-label="Remover item">&times;</button>'+
+       '<div class="ld'+(l.c?'':' warn')+'">'+esc(detail(l.p,l.q,l.c))+'</div></li>';
+  });
+  $('#lines').innerHTML=h;
+  $('#qEmpty').style.display = T.n? 'none':'block';
+  var t='<div><span>Subtotal ('+T.units+' un)</span><span>'+brl(T.sub)+'</span></div>';
+  if(S.disc>0) t+='<div><span>Desconto adicional ('+String(S.disc).replace('.',',')+'%)</span><span>-'+brl(T.disc)+'</span></div>';
+  if(T.saved>0.004) t+='<div class="save"><span>Economia com preço de caixa</span><span>'+brl(T.saved)+'</span></div>';
+  if(T.miss) t+='<div class="save" style="color:var(--amber)"><span>'+T.miss+(S.cli==='final'?' item(ns) não vendido(s) para cliente final, fora do total':' item(ns) sem preço nesta tabela, fora do total')+'</span></div>';
+  t+='<div class="big"><span>Total</span><span>'+brl(T.total)+'</span></div>';
+  $('#tot').innerHTML=t;
+  $('#barTotal').textContent=brl(T.total);
+  $('#barInfo').textContent = T.n? (T.n+(T.n===1?' item, ':' itens, ')+T.units+' un') : 'Orçamento vazio';
+  $('#client').value!==S.client && ($('#client').value=S.client);
+  if(document.activeElement!==$('#disc')) $('#disc').value = S.disc? S.disc : '';
+  updateClear();
+}
+function setQty(id,q){
+  q=Math.max(0,Math.min(9999,Math.floor(Number(q)||0)));
+  if(q>0) S.cart[id]=q; else delete S.cart[id];
+  updateRow(id); renderCart(); save();
+}
+function refreshAll(){renderControls(); renderList(); renderCart(); save();}
+
+/* ---------- texto, impressão ---------- */
+function quoteText(){
+  var T=totals(), d=new Date().toLocaleDateString('pt-BR');
+  var s='*Orçamento The Class Professional*\n';
+  if(S.client.trim()) s+='Cliente: '+S.client.trim()+'\n';
+  s+='Tabela: '+tabelaNome()+'\nData: '+d+'\n\n';
+  T.lines.forEach(function(l){
+    if(!l.c) return;
+    s+=l.q+'x '+l.p.n+'\n   '+detail(l.p,l.q,l.c)+' = '+brl(l.c.total)+'\n';
+  });
+  s+='\nSubtotal: '+brl(T.sub)+'\n';
+  if(S.disc>0) s+='Desconto adicional ('+String(S.disc).replace('.',',')+'%): -'+brl(T.disc)+'\n';
+  s+='*Total: '+brl(T.total)+'*';
+  if(S.notes.trim()) s+='\n\nObservações: '+S.notes.trim();
+  return s;
+}
+function toast(m,undo){
+  var t=$('#toast'); t.textContent=m;
+  if(undo){
+    var b=document.createElement('button'); b.type='button'; b.className='tbtn'; b.textContent='Desfazer';
+    b.onclick=function(){undo(); t.classList.remove('show'); t.style.pointerEvents='none';};
+    t.appendChild(b); t.style.pointerEvents='auto';
+  } else { t.style.pointerEvents='none'; }
+  t.classList.add('show'); clearTimeout(toast._t);
+  toast._t=setTimeout(function(){t.classList.remove('show'); t.style.pointerEvents='none';}, undo?7000:2200);
+}
+function hasWork(){return totals().n>0 || S.client.trim()!=='' || S.notes.trim()!=='' || S.disc>0;}
+function updateClear(){var h=hasWork(); document.querySelectorAll('.js-clear').forEach(function(b){b.disabled=!h;});}
+function copyText(txt){
+  function fallback(){
+    var ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    var ok=false; try{ok=document.execCommand('copy');}catch(e){}
+    document.body.removeChild(ta); toast(ok?'Texto copiado':'Não foi possível copiar');
+  }
+  if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(txt).then(function(){toast('Texto copiado');},fallback); }
+  else fallback();
+}
+function printQuote(){
+  var T=totals(), d=new Date().toLocaleDateString('pt-BR');
+  var h='<h1>Orçamento The Class Professional</h1><p class="pm">'+(S.client.trim()?'Cliente: '+esc(S.client.trim())+'<br>':'')+'Tabela: '+esc(tabelaNome())+'<br>Data: '+d+'</p>';
+  h+='<table><thead><tr><th>Produto</th><th>Qtd</th><th>Detalhe</th><th>Total</th></tr></thead><tbody>';
+  T.lines.forEach(function(l){ if(!l.c) return;
+    h+='<tr><td>'+esc(l.p.n)+'<br><small>'+esc(l.p.code)+'</small></td><td>'+l.q+'</td><td>'+esc(detail(l.p,l.q,l.c))+'</td><td>'+brl(l.c.total)+'</td></tr>';});
+  h+='</tbody></table><div class="pt">Subtotal: '+brl(T.sub)+'<br>'+(S.disc>0?'Desconto adicional ('+String(S.disc).replace('.',',')+'%): -'+brl(T.disc)+'<br>':'')+'<b>Total: '+brl(T.total)+'</b></div>';
+  if(S.notes.trim()) h+='<p>Observações: '+esc(S.notes.trim())+'</p>';
+  $('#printArea').innerHTML=h; window.print();
+}
+
+/* ---------- janela "todas as tabelas" ---------- */
+function showTabs(id){
+  var p=BYID[id], x=p.p;
+  var rows=[['Distribuidor',x.dist,'dist'],['Distribuidor, caixa fechada',x.distCx,'dist'],
+    ['Profissional com desconto exclusivo',x.spec,'spec'],
+    ['Profissional RJ Baixada/Centro',x.rj,'rj'],['Profissional RJ, caixa fechada',x.rjCx,'rj'],
+    ['Profissional Região II',x.r2,'r2'],['Profissional Região II, caixa fechada',x.r2Cx,'r2'],
+    ['Profissional Região III',x.r3,'r3'],['Profissional Região III, caixa fechada',x.r3Cx,'r3'],
+    ['Cliente final sugerido',x.fin,'fin'],['Cliente final sugerido, Região III',x.fin3,'fin3']];
+  var h='<h3>'+esc(p.n)+'</h3><p>'+esc(p.code)+(p.b?', caixa com '+p.b+' un':'')+'</p><table>';
+  rows.forEach(function(r){h+='<tr><td>'+r[0]+'</td><td>'+(r[1]==null?'-':brl(r[1]))+'</td></tr>';});
+  h+='</table><button type="button" class="btn solid" id="dlgOk">Fechar</button>';
+  $('#dlgBody').innerHTML=h;
+  var dlg=$('#dlg'); if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+  $('#dlgOk').onclick=function(){ if(dlg.close) dlg.close(); else dlg.removeAttribute('open'); };
+}
+
+/* ---------- eventos ---------- */
+$('#segCli').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-cli]'); if(!b) return;
+  S.cli=b.getAttribute('data-cli'); refreshAll();
+});
+$('#segReg').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-reg]'); if(!b||b.disabled) return;
+  S.reg=b.getAttribute('data-reg'); refreshAll();
+});
+$('#spec').addEventListener('change',function(e){S.spec=e.target.checked; refreshAll();});
+document.querySelectorAll('input[name=boxMode]').forEach(function(r){
+  r.addEventListener('change',function(){ if(r.checked){S.boxMode=r.value; refreshAll();} });
+});
+$('#q').addEventListener('input',function(e){F.q=e.target.value; renderList();});
+$('#chips').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-g]'); if(!b) return;
+  F.g=b.getAttribute('data-g'); renderChips(); renderList();
+});
+$('#list').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-act]'); if(!b) return;
+  var act=b.getAttribute('data-act'), art=b.closest('.item'), id=art?art.getAttribute('data-id'):null;
+  if(act==='plus') setQty(id,(S.cart[id]||0)+1);
+  else if(act==='minus') setQty(id,(S.cart[id]||0)-1);
+  else if(act==='box') setQty(id,(S.cart[id]||0)+BYID[id].b);
+  else if(act==='tabs') showTabs(id);
+  else if(act==='kit'){
+    var g=Number(b.getAttribute('data-g')), n=0;
+    D.items.forEach(function(p){ if(p.g===g && tier(p).unit!=null){S.cart[p.id]=(S.cart[p.id]||0)+1; n++;} });
+    renderList(); renderCart(); save(); toast(n? 'Kit adicionado ao orçamento' : 'Nenhum item deste kit é vendido nesta tabela');
+  }
+});
+$('#list').addEventListener('change',function(e){
+  if(e.target.matches('.qty input')){ setQty(e.target.closest('.item').getAttribute('data-id'), e.target.value); e.target.value=S.cart[e.target.closest('.item').getAttribute('data-id')]||0; }
+});
+$('#list').addEventListener('focusin',function(e){ if(e.target.matches('.qty input')) e.target.select(); });
+$('#lines').addEventListener('click',function(e){
+  var b=e.target.closest('button[data-act=rm]'); if(!b) return;
+  var id=b.closest('li').getAttribute('data-id'); setQty(id,0);
+});
+$('#client').addEventListener('input',function(e){S.client=e.target.value; save(); updateClear();});
+$('#notes').addEventListener('input',function(e){S.notes=e.target.value; save(); updateClear();});
+$('#notes').value=S.notes;
+$('#disc').addEventListener('input',function(e){
+  var v=parseFloat(String(e.target.value).replace(',','.')); S.disc=isFinite(v)?Math.min(100,Math.max(0,v)):0;
+  renderCart(); save();
+});
+$('#bCopy').addEventListener('click',function(){
+  if(!totals().n){toast('Adicione itens ao orçamento primeiro'); return;}
+  copyText(quoteText());
+});
+$('#bPrint').addEventListener('click',function(){
+  if(!totals().n){toast('Adicione itens ao orçamento primeiro'); return;}
+  printQuote();
+});
+document.querySelectorAll('.js-clear').forEach(function(b){
+  b.addEventListener('click',function(){
+    if(!hasWork()) return;
+    var snap={cart:S.cart,disc:S.disc,client:S.client,notes:S.notes};
+    S.cart={}; S.disc=0; S.client=''; S.notes='';
+    $('#client').value=''; $('#notes').value=''; refreshAll();
+    toast('Orçamento limpo',function(){
+      S.cart=snap.cart; S.disc=snap.disc; S.client=snap.client; S.notes=snap.notes;
+      $('#client').value=S.client; $('#notes').value=S.notes; refreshAll();
+    });
+  });
+});
+function openQuote(o){ $('#quote').classList.toggle('open',o); $('#scrim').classList.toggle('open',o); }
+$('#bOpen').addEventListener('click',function(){openQuote(true);});
+$('#qClose').addEventListener('click',function(){openQuote(false);});
+$('#scrim').addEventListener('click',function(){openQuote(false);});
+
+var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>';
+var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>';
+function applyTheme(th){
+  document.documentElement.setAttribute('data-theme',th);
+  var dark=(th==='dark');
+  $('#themeIcon').innerHTML=dark?SUN:MOON;
+  $('#themeTxt').textContent=dark?'Modo dia':'Modo noite';
+}
+$('#theme').addEventListener('click',function(){
+  var th=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  try{localStorage.setItem('theclass_tema_v1',th);}catch(e){}
+  applyTheme(th);
+});
+applyTheme(document.documentElement.getAttribute('data-theme')==='dark'?'dark':'light');
+renderChips(); refreshAll();
+$('#client').value=S.client;
+})();
+</script>
+</body>
+</html>
